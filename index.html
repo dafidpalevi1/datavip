@@ -8,14 +8,17 @@
 </head>
 <body class="bg-gray-900 text-white">
     <div class="container mx-auto p-4">
+        <div class="mb-4">
+            <input id="search-input" class="w-full p-2 rounded bg-gray-800 text-white" type="text" placeholder="Search by username..."/>
+        </div>
         <table class="min-w-full bg-gray-800 text-sm">
             <thead>
                 <tr class="bg-gray-700 text-left">
                     <th class="py-3 px-4">Kreator</th>
-                    <th class="py-3 px-4">Target dasar Berlian </th>
-                    <th class="py-3 px-4">Berlian </th>
-                    <th class="py-3 px-4">Durasi LIVE </th>
-                    <th class="py-3 px-4">Jumlah hari menyiarkan LIVE yang valid </th>
+                    <th class="py-3 px-4">Target dasar Berlian</th>
+                    <th class="py-3 px-4">Berlian</th>
+                    <th class="py-3 px-4">Durasi LIVE</th>
+                    <th class="py-3 px-4">Jumlah hari menyiarkan LIVE yang valid</th>
                 </tr>
             </thead>
             <tbody id="table-body">
@@ -3802,33 +3805,43 @@
         "img": "https://placehold.co/600x400?text=Profile+image+of+user3670810114162"
     }
 
-
-
-            
         ];
 
         const tableBody = document.getElementById('table-body');
+        const searchInput = document.getElementById('search-input');
 
-        data.forEach(item => {
-            const row = document.createElement('tr');
-            row.classList.add('border-b', 'border-gray-700');
+        function renderTable(filteredData) {
+            tableBody.innerHTML = '';
+            filteredData.forEach(item => {
+                const row = document.createElement('tr');
+                row.classList.add('border-b', 'border-gray-700');
 
-            row.innerHTML = `
-                <td class="py-3 px-4 flex items-center">
-                    <img alt="Profile picture of ${item.name}" class="rounded-full mr-2" height="40" src="${item.img}" width="40"/>
-                    <div>
-                        <div>${item.name}</div>
-                        <div class="text-gray-400 text-xs">ID Kreator: ${item.id}</div>
-                    </div>
-                </td>
-                <td class="py-3 px-4">${item.target}</td>
-                <td class="py-3 px-4">${item.diamonds}</td>
-                <td class="py-3 px-4">${item.duration}</td>
-                <td class="py-3 px-4">${item.validDays}</td>
-            `;
+                row.innerHTML = `
+                    <td class="py-3 px-4 flex items-center">
+                        <img alt="Profile picture of ${item.name}" class="rounded-full mr-2" height="40" src="${item.img}" width="40"/>
+                        <div>
+                            <div>${item.name}</div>
+                            <div class="text-gray-400 text-xs">ID Kreator: ${item.id}</div>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">${item.target}</td>
+                    <td class="py-3 px-4">${item.diamonds}</td>
+                    <td class="py-3 px-4">${item.duration}</td>
+                    <td class="py-3 px-4">${item.validDays}</td>
+                `;
 
-            tableBody.appendChild(row);
+                tableBody.appendChild(row);
+            });
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredData = data.filter(item => item.name.toLowerCase().includes(searchTerm));
+            renderTable(filteredData);
         });
+
+        // Initial render
+        renderTable(data);
     </script>
 </body>
 </html>
