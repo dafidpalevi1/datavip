@@ -1,0 +1,1346 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>VIP AGENCY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-4">
+        <table class="min-w-full bg-gray-800 text-sm">
+            <thead>
+                <tr class="bg-gray-700 text-left">
+                    <th class="py-3 px-4">Kreator</th>
+                    <th class="py-3 px-4">Target dasar Berlian </th>
+                    <th class="py-3 px-4">Berlian </th>
+                    <th class="py-3 px-4">Durasi LIVE </th>
+                    <th class="py-3 px-4">Jumlah hari menyiarkan LIVE yang valid </th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Data will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        const data = [
+            {
+                name: "mita_jenengku",
+                id: "7430113607846887441",
+                target: "0",
+                diamonds: "140,37K",
+                duration: "49j 33m 58d",
+                validDays: "22h",
+                img: "https://storage.googleapis.com/a1aa/image/IJ1NsfxlQeui30fZePFGBRTcLTBd3F2PmReLsFkslokdgp3eE.jpg"
+            },
+            {
+                name: "lichar45",
+                id: "7430031911210237969",
+                target: "0",
+                diamonds: "122,62K",
+                duration: "73j 38m 30d",
+                validDays: "18h",
+                img: "https://storage.googleapis.com/a1aa/image/Pl1IxLDlGeRkWC69Fn7D9YDVNoeTzmBBqvpV8W7VZhW8L92TA.jpg"
+            },
+            {
+                name: "kang_solwat",
+                id: "7430980869571035152",
+                target: "20K",
+                diamonds: "90,83K",
+                duration: "76j 29m 44d",
+                validDays: "28h",
+                img: "https://storage.googleapis.com/a1aa/image/5OAwbDpqt8LvFheBeNYXyKIllgobWgHPf4D2PJdMZETfv0bPB.jpg"
+            },
+            {
+                name: "rfldypstra",
+                id: "7434509513048358929",
+                target: "0",
+                diamonds: "28,94K",
+                duration: "57j 17m 16d",
+                validDays: "15h",
+                img: "https://storage.googleapis.com/a1aa/image/zM8g6eFN0JS8ViLeDfksHy2E5Wk9t4JDyQfBmDfQtzu1fSv9E.jpg"
+            },
+            {
+                name: "tpikoboy",
+                id: "7425404738788851713",
+                target: "0",
+                diamonds: "20,43K",
+                duration: "50j 35m 37d",
+                validDays: "18h",
+                img: "https://storage.googleapis.com/a1aa/image/Ckj48Od65gIhP9XoGvpQufeT30jjwWasIcJTBAVTAupAM92TA.jpg"
+            },
+            {
+                name: "harisastrawinata3",
+                id: "7431298459845672976",
+                target: "0",
+                diamonds: "18,82K",
+                duration: "75j 28m 16d",
+                validDays: "22h",
+                img: "https://storage.googleapis.com/a1aa/image/V4HCrYgsqB4gMpyxN3HGrB9C5U03UUHXA5zy0M1SIHeDme2TA.jpg"
+            },
+            {
+                name: "dhearahmad11",
+                id: "7430528269949837328",
+                target: "0",
+                diamonds: "17,94K",
+                duration: "77j 35m 48d",
+                validDays: "26h",
+                img: "https://storage.googleapis.com/a1aa/image/Ehnq7w9LsQJQFhdpLIKM5OeiWUV4OjeO83MoWes2eLATw0bPB.jpg"
+            },
+            {
+                name: "cuwit24",
+                id: "7433578522687307793",
+                target: "0",
+                diamonds: "17,77K",
+                duration: "58j 21m 1d",
+                validDays: "22h",
+                img: "https://storage.googleapis.com/a1aa/image/hZza5kP0HTYCCJ4ctzUCyQZ5BxkWQVvwAcEkuHrY1phBTv9E.jpg"
+            },
+            {
+                name: "nyonyaoliveadi",
+                id: "7425943131891159057",
+                target: "0",
+                diamonds: "17,04K",
+                duration: "95j 7m 17d",
+                validDays: "26h",
+                img: "https://storage.googleapis.com/a1aa/image/8t4gPcGcXsa1FVF1Q0HBTNAEs21gfLWAR5auXE6bud8Ame2TA.jpg"
+            },
+            {
+                name: "servasius_m.m_",
+                id: "7421470891382554641",
+                target: "0",
+                diamonds: "15,62K",
+                duration: "49j 1m 15d",
+                validDays: "15h",
+                img: "https://storage.googleapis.com/a1aa/image/hrF45SLe1zVcGCmjw1XN1oiQ6meWmeDEDyPkMIKnIxp0f2bPB.jpg"
+            },
+            {
+                name: "mayadani56",
+                id: "7431096457228435457",
+                target: "0",
+                diamonds: "14,81K",
+                duration: "66j 33m 33d",
+                validDays: "20h",
+                img: "https://storage.googleapis.com/a1aa/image/tdGeUISpLHWSCCrhMMRKLdZIXNU6mzSN6bX1BKWmHxh93e2TA.jpg"
+            },
+            {
+                name: "damianaron2106",
+                id: "7430093318496813073",
+                target: "0",
+                diamonds: "13,88K",
+                duration: "49j 0m 18d",
+                validDays: "18h",
+                img: "https://storage.googleapis.com/a1aa/image/iGKssc3XfpxnHqOBa2ytVVfZ6jyMXbdqwEmZHCjQMbFxv92TA.jpg"
+            },
+            {
+                name: "babngrobi",
+                id: "7421139051970871297",
+                target: "0",
+                diamonds: "13,34K",
+                duration: "100j 45m 17d",
+                validDays: "26h",
+                img: "https://storage.googleapis.com/a1aa/image/88hZbCTQBKKiFRdhEv11g6nlkKJGgVIP3sIFniEGFeD53e2TA.jpg"
+            },
+            {
+                name: "nadiatandika",
+                id: "7430481947367079952",
+                target: "10K",
+                diamonds: "12,96K",
+                duration: "49j 59m 34d",
+                validDays: "19h",
+                img: "https://storage.googleapis.com/a1aa/image/7CW2zibSwmqEAhOffSeRcMF1LoTruBI79bRivaOpsPtvf2bPB.jpg"
+            },
+            {
+                name: "nadatriwahyuni",
+                id: "7427513185214693393",
+                target: "0",
+                diamonds: "11,91K",
+                duration: "95j 41m 32d",
+                validDays: "25h",
+                img: "https://storage.googleapis.com/a1aa/image/qsqYZRlYAkaKBpA7elx1IVaemllgtKWIYzMzD620Lqb5v92TA.jpg"
+            },
+            {
+                name: "all______37",
+                id: "7432518442907025425",
+                target: "0",
+                diamonds: "9,73K",
+                duration: "130j 39m 16d",
+                validDays: "23h",
+                img: "https://storage.googleapis.com/a1aa/image/56r6zGuUOOqVJlmqsBewaJlA3lmzHspDEFeMcUzmYkAwv92TA.jpg"
+            },
+            {
+                name: "mucienkalexsha18",
+                id: "7426586214633078785",
+                target: "0",
+                diamonds: "9,32K",
+                duration: "113j 12m 18d",
+                validDays: "25h",
+                img: "https://storage.googleapis.com/a1aa/image/Sp3AZd0QIyZjE9qJ5I49uPbT5XNz83J3nfGugrZse950v92TA.jpg"
+            },
+            {
+                name: "yuyunyuliyati",
+                id: "7423733746634915857",
+                target: "0",
+                diamonds: "8,96K",
+                duration: "66j 58m 30d",
+                validDays: "22h",
+                img: "https://storage.googleapis.com/a1aa/image/6SOYcQdYtmafJ6iyKb2Tz951h0H0vwh1DG5LRoqNPig63e2TA.jpg"
+            },
+            {
+                name: "usergoldline",
+                id: "7430116655986016257",
+                target: "0",
+                diamonds: "8K",
+                duration: "155j 57m 24d",
+                validDays: "19h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "keinzhakreatif02",
+                id: "7428628913041080337",
+                target: "0",
+                diamonds: "7,91K",
+                duration: "65j 52m 30d",
+                validDays: "20h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "rohilah339",
+                id: "7431883994968489985",
+                target: "0",
+                diamonds: "7,64K",
+                duration: "145j 35m 41d",
+                validDays: "30h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "gede.agus168",
+                id: "7432855501865549825",
+                target: "0",
+                diamonds: "7,45K",
+                duration: "131j 6m 9d",
+                validDays: "23h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "faleriomanuputty",
+                id: "7359138919990067205",
+                target: "10K",
+                diamonds: "7,23K",
+                duration: "40j 39m 57d",
+                validDays: "15h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "erzhanyoth1212",
+                id: "7431071948265996289",
+                target: "0",
+                diamonds: "7,13K",
+                duration: "45j 14m 12d",
+                validDays: "21h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "indahmngaropah",
+                id: "7425807779841114113",
+                target: "0",
+                diamonds: "7,08K",
+                duration: "133j 25m 27d",
+                validDays: "24h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "sundari.sunda",
+                id: "7429650346600923153",
+                target: "0",
+                diamonds: "6,42K",
+                duration: "114j 15m 34d",
+                validDays: "29h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "aniita.nita514",
+                id: "7428972952739299345",
+                target: "0",
+                diamonds: "5,96K",
+                duration: "116j 29m 58d",
+                validDays: "30h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "ramadanyputra4",
+                id: "7434966601319022609",
+                target: "0",
+                diamonds: "5,43K",
+                duration: "60j 22m 37d",
+                validDays: "15h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "acep.scooby",
+                id: "7428149004581732369",
+                target: "0",
+                diamonds: "5,15K",
+                duration: "50j 22m 33d",
+                validDays: "18h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "efoyqueen83",
+                id: "7422204536099504145",
+                target: "0",
+                diamonds: "5,07K",
+                duration: "62j 35m 22d",
+                validDays: "18h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "yangterhianati7103",
+                id: "7426205547533287440",
+                target: "0",
+                diamonds: "4,95K",
+                duration: "83j 41m 55d",
+                validDays: "25h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "putryarogan17",
+                id: "7429648081018224656",
+                target: "0",
+                diamonds: "4,65K",
+                duration: "47j 19m 18d",
+                validDays: "22h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "wheltysatria",
+                id: "7432894819632185360",
+                target: "0",
+                diamonds: "4,62K",
+                duration: "43j 40m 44d",
+                validDays: "19h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "des_himoo",
+                id: "7437005136565714945",
+                target: "0",
+                diamonds: "4,4K",
+                duration: "30j 17m 54d",
+                validDays: "12h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "akram_duwila",
+                id: "7425575555640360977",
+                target: "0",
+                diamonds: "4,38K",
+                duration: "49j 34m 50d",
+                validDays: "13h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "sum.ayam.79",
+                id: "7427468867888316417",
+                target: "0",
+                diamonds: "4,26K",
+                duration: "14j 52m 9d",
+                validDays: "6h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+                name: "pakgurubulungan",
+                id: "7435251584013041665",
+                target: "0",
+                diamonds: "4,13K",
+                duration: "69j 5m 34d",
+                validDays: "15h",
+                img: "https://placehold.co/40x40"
+            },
+            {
+        "name": "taurusgurlsmei",
+        "id": "7423660257530052625",
+        "target": "0",
+        "diamonds": "3,86K",
+        "duration": "44j 49m 53d",
+        "validDays": "18h",
+        "img": "https://placehold.co/40x40"
+    },
+    {
+        "name": "daniels_666",
+        "id": "7427463792352854033",
+        "target": "0",
+        "diamonds": "3,63K",
+        "duration": "46j 49m 6d",
+        "validDays": "22h",
+        "img": "https://placehold.co/40x40"
+    },
+    {
+        "name": "oma.kenes",
+        "id": "7433762840411996177",
+        "target": "0",
+        "diamonds": "3,51K",
+        "duration": "62j 50m 32d",
+        "validDays": "25h",
+        "img": "https://placehold.co/40x40"
+    },
+    {
+        "name": "kyyft123",
+        "id": "7434092037474992145",
+        "target": "0",
+        "diamonds": "3,3K",
+        "duration": "104j 13m 27d",
+        "validDays": "19h",
+        "img": "https://placehold.co/40x40"
+    },
+    {
+        "name": "f4i54l47",
+        "id": "7425548889719341072",
+        "target": "0",
+        "diamonds": "3,12K",
+        "duration": "72j 31m 13d",
+        "validDays": "18h",
+        "img": "https://placehold.co/40x40"
+    },
+    {
+        "name": "rhmt_99",
+        "id": "7428541794025209872",
+        "target": "0",
+        "diamonds": "2,93K",
+        "duration": "40j 7m 21d",
+        "validDays": "17h",
+        "img": "https://placehold.co/40x40"
+    },
+    {
+        "name": "abdulhamid440128",
+        "id": "7431024040984363024",
+        "target": "0",
+        "diamonds": "2,91K",
+        "duration": "74j 2m 6d",
+        "validDays": "16h",
+        "img": "https://placehold.co/40x40"
+    },
+    {
+        "name": "im_ren1212",
+        "id": "7431522700876726289",
+        "target": "0",
+        "diamonds": "2,78K",
+        "duration": "36j 46m 22d",
+        "validDays": "17h",
+        "img": "https://placehold.co/40x40"
+    },
+    {
+        "name": "dewiie.antii",
+        "id": "7431537299415973905",
+        "target": "0",
+        "diamonds": "2,74K",
+        "duration": "55j 53m 21d",
+        "validDays": "21h",
+        "img": "https://placehold.co/40x40"
+    },
+    {
+        "name": "muham.muham52",
+        "id": "7435274714093830145",
+        "target": "0",
+        "diamonds": "2,73K",
+        "duration": "55j 44m 18d",
+        "validDays": "20h",
+        "img": "https://placehold.co/40x40"
+    },
+    {
+        "name": "shyvir.goo",
+        "id": "7428125154334638096",
+        "target": "0",
+        "diamonds": "2,61K",
+        "duration": "63j 3m 51d",
+        "validDays": "17h",
+        "img": "https://placehold.co/40x40"
+    },
+    {
+        "name": "herty1103_",
+        "id": "7429193285496881169",
+        "target": "0",
+        "diamonds": "2,53K",
+        "duration": "36j 42m 8d",
+        "validDays": "13h",
+        "img": "https://placehold.co/40x40"
+    },
+    {
+        "name": "besfour21",
+        "id": "7422269347478962192",
+        "target": "0",
+        "diamonds": "2,44K",
+        "duration": "39j 22m 48d",
+        "validDays": "16h",
+        "img": "https://placehold.co/40x40"
+    },
+    {
+        "name": "r2_wrt",
+        "id": "7437062353708908561",
+        "target": "0",
+        "diamonds": "2,42K",
+        "duration": "31j 19m 37d",
+        "validDays": "8h",
+        "img": "https://placehold.co/40x40"
+    },
+    
+    {
+        "name": "wongnruthus",
+        "id": "7431030995354435601",
+        "target": "0",
+        "diamonds": "2,41K",
+        "duration": "90j 9m 56d",
+        "validDays": "27h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+wongnruthus"
+    },
+    {
+        "name": "www.syampujangga.com",
+        "id": "7433044212557381648",
+        "target": "0",
+        "diamonds": "2,3K",
+        "duration": "64j 56m 46d",
+        "validDays": "25h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+www.syampujangga.com"
+    },
+    {
+        "name": "andrean87__",
+        "id": "7423750875740569617",
+        "target": "0",
+        "diamonds": "2,29K",
+        "duration": "43j 46m 55d",
+        "validDays": "23h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+andrean87__"
+    },
+    {
+        "name": "bangkreppp",
+        "id": "7423703436044124177",
+        "target": "0",
+        "diamonds": "2,27K",
+        "duration": "103j 38m 52d",
+        "validDays": "25h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+bangkreppp"
+    },
+    {
+        "name": "mekanikberutal",
+        "id": "7423420513709522945",
+        "target": "0",
+        "diamonds": "2,2K",
+        "duration": "29j 41m 18d",
+        "validDays": "11h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+mekanikberutal"
+    },
+    {
+        "name": "sayyamawar",
+        "id": "7431111388455583761",
+        "target": "0",
+        "diamonds": "2,05K",
+        "duration": "3j 5m 55d",
+        "validDays": "1h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+sayyamawar"
+    },
+    {
+        "name": "jakarolis28",
+        "id": "7429504398885273616",
+        "target": "0",
+        "diamonds": "2,03K",
+        "duration": "44j 7m 18d",
+        "validDays": "16h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+jakarolis28"
+    },
+    {
+        "name": "nurhasa670",
+        "id": "7423206162780160016",
+        "target": "0",
+        "diamonds": "2,03K",
+        "duration": "67j 15m 38d",
+        "validDays": "24h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+nurhasa670"
+    },
+    {
+        "name": "jeki150595",
+        "id": "7433188645537906689",
+        "target": "0",
+        "diamonds": "1,98K",
+        "duration": "56j 57m 12d",
+        "validDays": "21h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+jeki150595"
+    },
+    {
+        "name": "nurhasanalbs",
+        "id": "7428259439133687825",
+        "target": "0",
+        "diamonds": "1,89K",
+        "duration": "43j 22m 49d",
+        "validDays": "17h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+nurhasanalbs"
+    },
+    {
+        "name": "raden_saputra07",
+        "id": "7428788886786015249",
+        "target": "0",
+        "diamonds": "1,86K",
+        "duration": "53j 18m 11d",
+        "validDays": "14h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+raden_saputra07"
+    },
+    {
+        "name": "kikiachadiat",
+        "id": "7421858941937909761",
+        "target": "0",
+        "diamonds": "1,84K",
+        "duration": "44j 49m 2d",
+        "validDays": "19h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+kikiachadiat"
+    },
+    {
+        "name": "kjg.tikahelmi.vip",
+        "id": "7422416992436518928",
+        "target": "0",
+        "diamonds": "1,76K",
+        "duration": "43j 12m 3d",
+        "validDays": "16h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+kjg.tikahelmi.vip"
+    },
+    {
+        "name": "jum.iati11",
+        "id": "7429475262162583553",
+        "target": "0",
+        "diamonds": "1,76K",
+        "duration": "115j 56m 52d",
+        "validDays": "29h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+jum.iati11"
+    },
+    {
+        "name": "amanahfadli",
+        "id": "7427124771508224017",
+        "target": "0",
+        "diamonds": "1,75K",
+        "duration": "79j 17m 27d",
+        "validDays": "29h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+amanahfadli"
+    },
+    {
+        "name": "pangaribak_tiktok",
+        "id": "7421532205345849360",
+        "target": "0",
+        "diamonds": "1,72K",
+        "duration": "28j 35m 48d",
+        "validDays": "12h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+pangaribak_tiktok"
+    },
+    {
+        "name": "kurniatikurniati853",
+        "id": "7436746948562010113",
+        "target": "0",
+        "diamonds": "1,72K",
+        "duration": "41j 1m 46d",
+        "validDays": "16h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+kurniatikurniati853"
+    },
+    {
+        "name": "ditaer2",
+        "id": "7433832768456638481",
+        "target": "0",
+        "diamonds": "1,59K",
+        "duration": "6j 27m 32d",
+        "validDays": "3h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+ditaer2"
+    },
+    {
+        "name": "puraji123",
+        "id": "7426960550912901136",
+        "target": "0",
+        "diamonds": "1,55K",
+        "duration": "139j 37m 21d",
+        "validDays": "29h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+puraji123"
+    },
+    {
+        "name": "arni_usman",
+        "id": "7422601347402465281",
+        "target": "0",
+        "diamonds": "1,51K",
+        "duration": "37j 37m 31d",
+        "validDays": "16h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+arni_usman"
+    },
+    {
+        "name": "ramien.keyboard",
+        "id": "7420697286415777809",
+        "target": "0",
+        "diamonds": "1,42K",
+        "duration": "67j 17m 49d",
+        "validDays": "21h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+ramien.keyboard"
+    },
+    {
+        "name": "eyunhyun",
+        "id": "7432558096309846017",
+        "target": "0",
+        "diamonds": "1,42K",
+        "duration": "9j 8m 50d",
+        "validDays": "5h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+eyunhyun"
+    },
+    {
+        "name": "ekasapta481",
+        "id": "7430102895007367184",
+        "target": "0",
+        "diamonds": "1,36K",
+        "duration": "64j 52m 2d",
+        "validDays": "24h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+ekasapta481"
+    },
+    {
+        "name": "yulismbakyul18",
+        "id": "7433986360371036177",
+        "target": "0",
+        "diamonds": "1,31K",
+        "duration": "37j 18m 4d",
+        "validDays": "16h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+yulismbakyul18"
+    },
+    {
+        "name": "dini.karini3",
+        "id": "7427253613786906640",
+        "target": "0",
+        "diamonds": "1,3K",
+        "duration": "50j 33m 57d",
+        "validDays": "20h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+dini.karini3"
+    },
+    {
+        "name": "dwiapriyadi008",
+        "id": "7434319084038406160",
+        "target": "0",
+        "diamonds": "1,29K",
+        "duration": "85j 32m 4d",
+        "validDays": "22h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+dwiapriyadi008"
+    },
+    {
+        "name": "tukang.linsang",
+        "id": "7431892123143880720",
+        "target": "0",
+        "diamonds": "1,25K",
+        "duration": "40j 41m 8d",
+        "validDays": "17h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+tukang.linsang"
+    },
+    {
+        "name": "idnekamu",
+        "id": "7427230824266924049",
+        "target": "0",
+        "diamonds": "1,23K",
+        "duration": "2j 25m 2d",
+        "validDays": "1h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+idnekamu"
+    },
+    {
+        "name": "arikhensongkokbelok",
+        "id": "7428212871391363073",
+        "target": "0",
+        "diamonds": "1,15K",
+        "duration": "16j 25m 28d",
+        "validDays": "7h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+arikhensongkokbelok"
+    },
+    {
+        "name": "bg_madhie",
+        "id": "7422549159057784849",
+        "target": "0",
+        "diamonds": "1,12K",
+        "duration": "28j 55m 46d",
+        "validDays": "11h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+bg_madhie"
+    },
+    {
+        "name": "rfs03",
+        "id": "7428566593262845969",
+        "target": "0",
+        "diamonds": "1,1K",
+        "duration": "60j 2m 19d",
+        "validDays": "17h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+rfs03"
+    },
+    {
+        "name": "chitta2223",
+        "id": "7424815382223142928",
+        "target": "0",
+        "diamonds": "1,09K",
+        "duration": "46j 17m 30d",
+        "validDays": "22h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+chitta2223"
+    },
+    {
+        "name": "masyadiok",
+        "id": "7435607587481010193",
+        "target": "0",
+        "diamonds": "1,08K",
+        "duration": "36j 34m 6d",
+        "validDays": "13h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+masyadiok"
+    },
+    {
+        "name": "nasutionirawanyayan",
+        "id": "7419848174589771792",
+        "target": "0",
+        "diamonds": "1,07K",
+        "duration": "63j 26m 31d",
+        "validDays": "18h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+nasutionirawanyayan"
+    },
+    {
+        "name": "edi.purwanto53",
+        "id": "7430612680659959824",
+        "target": "0",
+        "diamonds": "1K",
+        "duration": "23j 14m 24d",
+        "validDays": "13h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+edi.purwanto53"
+    },
+    {
+        "name": "edytiro_yt",
+        "id": "7430763361547288577",
+        "target": "0",
+        "diamonds": "995",
+        "duration": "52j 13m 34d",
+        "validDays": "16h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+edytiro_yt"
+    },
+    {
+        "name": "azaryajunior",
+        "id": "7431049093159436304",
+        "target": "0",
+        "diamonds": "993",
+        "duration": "54j 14m 58d",
+        "validDays": "26h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+azaryajunior"
+    },
+    {
+        "name": "vita123.com5",
+        "id": "7427824682759618576",
+        "target": "0",
+        "diamonds": "992",
+        "duration": "34j 23m 7d",
+        "validDays": "17h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+vita123.com5"
+    },
+    {
+        "name": "carolina33043",
+        "id": "7427259063739842576",
+        "target": "0",
+        "diamonds": "981",
+        "duration": "125j 10m 40d",
+        "validDays": "30h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+carolina33043"
+    },
+    {
+        "name": "alloy414",
+        "id": "7429854538871422977",
+        "target": "0",
+        "diamonds": "957",
+        "duration": "49j 21m 20d",
+        "validDays": "20h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+alloy414"
+    },
+    {
+        "name": "delon.ukat",
+        "id": "7435261264517038097",
+        "target": "0",
+        "diamonds": "939",
+        "duration": "67j 6m 29d",
+        "validDays": "18h",
+       "img": "https://placehold.co/600x400?text=Profile+image+of+alloy414"
+    },
+
+    {
+        "name": "mas_jem.1",
+        "id": "7421455686233800721",
+        "target": "0",
+        "diamonds": "937",
+        "duration": "23j 10m 50d",
+        "validDays": "10h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+mas_jem.1"
+    },
+    {
+        "name": "yantoaja484",
+        "id": "7420594557911302145",
+        "target": "0",
+        "diamonds": "925",
+        "duration": "55j 58m 39d",
+        "validDays": "23h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+yantoaja484"
+    },
+    {
+        "name": "ki_manto70",
+        "id": "7423737001188442128",
+        "target": "0",
+        "diamonds": "922",
+        "duration": "89j 7m 8d",
+        "validDays": "26h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+ki_manto70"
+    },
+    {
+        "name": "rafiflorist_jatinangor",
+        "id": "7434061046555410433",
+        "target": "0",
+        "diamonds": "898",
+        "duration": "40j 28m 29d",
+        "validDays": "15h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+rafiflorist_jatinangor"
+    },
+    {
+        "name": "fikriyosi",
+        "id": "7431171603112771600",
+        "target": "0",
+        "diamonds": "895",
+        "duration": "56j 20m 29d",
+        "validDays": "21h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+fikriyosi"
+    },
+    {
+        "name": "album500",
+        "id": "7429103088419700737",
+        "target": "0",
+        "diamonds": "838",
+        "duration": "78j 28m 58d",
+        "validDays": "22h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+album500"
+    },
+    {
+        "name": "anakemaksri01",
+        "id": "7422980605878616081",
+        "target": "0",
+        "diamonds": "837",
+        "duration": "41j 42m 21d",
+        "validDays": "15h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+anakemaksri01"
+    },
+    {
+        "name": "alvhee09",
+        "id": "7434318749311909889",
+        "target": "0",
+        "diamonds": "835",
+        "duration": "70j 31m 25d",
+        "validDays": "14h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+alvhee09"
+    },
+    {
+        "name": "dwiindahkurniati113",
+        "id": "7424863600851894288",
+        "target": "0",
+        "diamonds": "827",
+        "duration": "0d",
+        "validDays": "0h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+dwiindahkurniati113"
+    },
+    {
+        "name": "pemburudolar6368",
+        "id": "7425974541735821328",
+        "target": "0",
+        "diamonds": "811",
+        "duration": "57j 16m 58d",
+        "validDays": "18h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+pemburudolar6368"
+    },
+    {
+        "name": "muhamadwildan669",
+        "id": "7437173081560367121",
+        "target": "0",
+        "diamonds": "793",
+        "duration": "6j 21m 39d",
+        "validDays": "3h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+muhamadwildan669"
+    },
+    {
+        "name": "permana_mandala_0ficial",
+        "id": "7426263402827317264",
+        "target": "0",
+        "diamonds": "790",
+        "duration": "48j 47m 27d",
+        "validDays": "16h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+permana_mandala_0ficial"
+    },
+    {
+        "name": "ragildewe34",
+        "id": "7423768521336897552",
+        "target": "0",
+        "diamonds": "732",
+        "duration": "28j 59m 43d",
+        "validDays": "12h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+ragildewe34"
+    },
+    {
+        "name": "gunawaninfinix4",
+        "id": "7428071845993332753",
+        "target": "0",
+        "diamonds": "722",
+        "duration": "35j 10m 30d",
+        "validDays": "14h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+gunawaninfinix4"
+    },
+    {
+        "name": "__kdika03",
+        "id": "7437849748733771777",
+        "target": "0",
+        "diamonds": "705",
+        "duration": "68j 25m 45d",
+        "validDays": "15h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+__kdika03"
+    },
+    {
+        "name": "mrriyan79",
+        "id": "7430408217605324817",
+        "target": "0",
+        "diamonds": "700",
+        "duration": "33j 57m 1d",
+        "validDays": "11h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+mrriyan79"
+    },
+    {
+        "name": "trb.ritonga",
+        "id": "7433237865817145345",
+        "target": "0",
+        "diamonds": "698",
+        "duration": "47j 11m 32d",
+        "validDays": "18h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+trb.ritonga"
+    },
+    {
+        "name": "kangtopo_1",
+        "id": "7429878732367822865",
+        "target": "0",
+        "diamonds": "690",
+        "duration": "3j 40m 18d",
+        "validDays": "2h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+kangtopo_1"
+    },
+    {
+        "name": "rianchauchau",
+        "id": "7429839619757195265",
+        "target": "0",
+        "diamonds": "683",
+        "duration": "51j 10m 27d",
+        "validDays": "26h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+rianchauchau"
+    },
+    {
+        "name": "bangbass_44",
+        "id": "7434718933548204049",
+        "target": "0",
+        "diamonds": "681",
+        "duration": "100j 23m 58d",
+        "validDays": "19h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+bangbass_44"
+    },
+    {
+        "name": "mentari.senja845",
+        "id": "7427086270020485136",
+        "target": "0",
+        "diamonds": "672",
+        "duration": "59j 26m 54d",
+        "validDays": "28h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+mentari.senja845"
+    },
+    {
+        "name": "kitiw.261",
+        "id": "7436632827342667777",
+        "target": "0",
+        "diamonds": "648",
+        "duration": "25j 30m 3d",
+        "validDays": "9h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+kitiw.261"
+    },
+    {
+        "name": "05jee",
+        "id": "7432284200893480961",
+        "target": "0",
+        "diamonds": "633",
+        "duration": "48j 53m 27d",
+        "validDays": "18h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+05jee"
+    },
+    {
+        "name": "anak.bungsu495",
+        "id": "7432626736552247312",
+        "target": "0",
+        "diamonds": "629",
+        "duration": "33j 23m 41d",
+        "validDays": "11h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+anak.bungsu495"
+    },
+    {
+        "name": "mandalisse123",
+        "id": "7425406713031082001",
+        "target": "0",
+        "diamonds": "624",
+        "duration": "38j 5m 32d",
+        "validDays": "11h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+mandalisse123"
+    },
+    {
+        "name": "pucuakuuubbii",
+        "id": "7432540418090270721",
+        "target": "0",
+        "diamonds": "619",
+        "duration": "17j 57m 3d",
+        "validDays": "7h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+pucuakuuubbii"
+    },
+    {
+        "name": "mridoislami22",
+        "id": "7430777789915381761",
+        "target": "0",
+        "diamonds": "597",
+        "duration": "8j 1m 40d",
+        "validDays": "1h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+mridoislami22"
+    },
+    {
+        "name": "candra.ican28",
+        "id": "7421499951324217345",
+        "target": "0",
+        "diamonds": "564",
+        "duration": "11j 15m 51d",
+        "validDays": "7h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+candra.ican28"
+    },
+    {
+        "name": "fonsus.sinaga",
+        "id": "7432106178475393025",
+        "target": "0",
+        "diamonds": "541",
+        "duration": "59j 52m 6d",
+        "validDays": "23h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+fonsus.sinaga"
+    },
+    {
+        "name": "fannidwiputri95",
+        "id": "7439218574318878737",
+        "target": "0",
+        "diamonds": "537",
+        "duration": "22j 57m 36d",
+        "validDays": "9h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+fannidwiputri95"
+    },
+    {
+        "name": "nuraenny31",
+        "id": "7431697812334805009",
+        "target": "0",
+        "diamonds": "530",
+        "duration": "67j 20m 21d",
+        "validDays": "28h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+nuraenny31"
+    },
+    {
+        "name": "slametariyanto72",
+        "id": "7434623803478736897",
+        "target": "0",
+        "diamonds": "524",
+        "duration": "100j 58m 12d",
+        "validDays": "23h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+slametariyanto72"
+    },
+    {
+        "name": "ciciii197",
+        "id": "7430980659075694593",
+        "target": "0",
+        "diamonds": "513",
+        "duration": "41j 30m 31d",
+        "validDays": "18h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+ciciii197"
+    },
+    {
+        "name": "masdaffacell007",
+        "id": "7421682635757518849",
+        "target": "0",
+        "diamonds": "491",
+        "duration": "20j 58m 52d",
+        "validDays": "8h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+masdaffacell007"
+    },
+    {
+        "name": "izhal_nino",
+        "id": "7425308630532194305",
+        "target": "0",
+        "diamonds": "483",
+        "duration": "16j 10m 54d",
+        "validDays": "7h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+izhal_nino"
+    },
+    {
+        "name": "nanik.aswanti",
+        "id": "7426937221829230593",
+        "target": "0",
+        "diamonds": "476",
+        "duration": "172j 20m 12d",
+        "validDays": "29h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+nanik.aswanti"
+    },
+    {
+        "name": "dde.patimh",
+        "id": "7427091770548437008",
+        "target": "0",
+        "diamonds": "473",
+        "duration": "103j 28m 59d",
+        "validDays": "26h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+dde.patimh"
+    },
+    {
+        "name": "gusismu.raden.ismoyo",
+        "id": "7434305966675509264",
+        "target": "0",
+        "diamonds": "469",
+        "duration": "35j 25m 48d",
+        "validDays": "18h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+gusismu.raden.ismoyo"
+    },
+    {
+        "name": "asrulruli3",
+        "id": "7435231229164912641",
+        "target": "0",
+        "diamonds": "454",
+        "duration": "29j 16m 34d",
+        "validDays": "7h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+asrulruli3"
+    },
+    {
+        "name": "ketutsudianti701",
+        "id": "7429341953080410113",
+        "target": "0",
+        "diamonds": "450",
+        "duration": "58j 51m 15d",
+        "validDays": "22h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+ketutsudianti701"
+    },
+    {
+        "name": "risyakarim3",
+        "id": "7426527788657786896",
+        "target": "0",
+        "diamonds": "447",
+        "duration": "31j 55m 17d",
+        "validDays": "10h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+risyakarim3"
+    },
+    {
+        "name": "okeh.ahmad6",
+        "id": "7429099852820119569",
+        "target": "0",
+        "diamonds": "446",
+        "duration": "122j 55m 13d",
+        "validDays": "20h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+okeh.ahmad6"
+    },
+    {
+        "name": "tenjo_lg",
+        "id": "7436598367947522065",
+        "target": "0",
+        "diamonds": "432",
+        "duration": "22j 5m 21d",
+        "validDays": "6h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+tenjo_lg"
+    },
+    {
+        "name": "janiszebua2018",
+        "id": "7421835496327987217",
+        "target": "0",
+        "diamonds": "432",
+        "duration": "40j 33m 31d",
+        "validDays": "16h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+janiszebua2018"
+    },
+    {
+        "name": "pattarahma1986",
+        "id": "7426633693462052881",
+        "target": "0",
+        "diamonds": "409",
+        "duration": "10j 57m 55d",
+        "validDays": "5h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+pattarahma1986"
+    },
+    {
+        "name": "muhammadt_77",
+        "id": "7429217838688272385",
+        "target": "0",
+        "diamonds": "401",
+        "duration": "37j 40m 21d",
+        "validDays": "13h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+muhammadt_77"
+    },
+    {
+        "name": "asiahasiah272",
+        "id": "7429126774602170369",
+        "target": "0",
+        "diamonds": "401",
+        "duration": "15j 0m 24d",
+        "validDays": "6h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+asiahasiah272"
+    },
+    {
+        "name": "kngprid",
+        "id": "7422231967988613136",
+        "target": "0",
+        "diamonds": "378",
+        "duration": "33j 18m 38d",
+        "validDays": "15h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+kngprid"
+    },
+    {
+        "name": "andimuis8130",
+        "id": "7429864801012170753",
+        "target": "0",
+        "diamonds": "373",
+        "duration": "41j 11m 8d",
+        "validDays": "12h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+andimuis8130"
+    },
+    {
+        "name": "rafiigustavoo",
+        "id": "7434814753802911745",
+        "target": "0",
+        "diamonds": "366",
+        "duration": "48j 45m 27d",
+        "validDays": "17h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+rafiigustavoo"
+    },
+    {
+        "name": "p4r.noto",
+        "id": "7431547511606837249",
+        "target": "0",
+        "diamonds": "357",
+        "duration": "69j 45m 51d",
+        "validDays": "28h",
+        "img": "https://placehold.co/600x400?text=Profile+image+of+p4r.noto"
+    },
+
+    
+            
+        ];
+
+        const tableBody = document.getElementById('table-body');
+
+        data.forEach(item => {
+            const row = document.createElement('tr');
+            row.classList.add('border-b', 'border-gray-700');
+
+            row.innerHTML = `
+                <td class="py-3 px-4 flex items-center">
+                    <img alt="Profile picture of ${item.name}" class="rounded-full mr-2" height="40" src="${item.img}" width="40"/>
+                    <div>
+                        <div>${item.name}</div>
+                        <div class="text-gray-400 text-xs">ID Kreator: ${item.id}</div>
+                    </div>
+                </td>
+                <td class="py-3 px-4">${item.target}</td>
+                <td class="py-3 px-4">${item.diamonds}</td>
+                <td class="py-3 px-4">${item.duration}</td>
+                <td class="py-3 px-4">${item.validDays}</td>
+            `;
+
+            tableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>
