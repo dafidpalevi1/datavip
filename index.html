@@ -13,6 +13,9 @@
         <div class="mb-4">
             <input id="search-input" class="w-full p-2 rounded bg-gray-800 text-white" type="text" placeholder="Search by username..."/>
         </div>
+        <div class="mb-4">
+            <button id="add-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Tambahkan Kreator</button>
+        </div>
         <div class="overflow-x-auto">
             <table class="min-w-full bg-gray-800 text-sm">
                 <thead>
@@ -22,6 +25,7 @@
                         <th class="py-3 px-4">Berlian</th>
                         <th class="py-3 px-4">Durasi LIVE</th>
                         <th class="py-3 px-4">Jumlah hari menyiarkan LIVE yang valid</th>
+                        <th class="py-3 px-4">Actions</th>
                     </tr>
                 </thead>
                 <tbody id="table-body">
@@ -30,8 +34,27 @@
             </table>
         </div>
     </div>
+
+    <!-- Modal for Add/Edit -->
+    <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-gray-800 p-6 rounded-lg w-full max-w-md">
+            <h2 id="modal-title" class="text-2xl mb-4">Tambahkan Kreator</h2>
+            <input id="name" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" type="text" placeholder="Name"/>
+            <input id="id" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" type="text" placeholder="ID"/>
+            <input id="target" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" type="text" placeholder="Target dasar Berlian"/>
+            <input id="diamonds" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" type="text" placeholder="Berlian"/>
+            <input id="duration" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" type="text" placeholder="Durasi LIVE"/>
+            <input id="validDays" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" type="text" placeholder="Jumlah hari menyiarkan LIVE yang valid"/>
+            <input id="img" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" type="text" placeholder="Image URL"/>
+            <div class="flex justify-end">
+                <button id="save-button" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2">Save</button>
+                <button id="cancel-button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Cancel</button>
+            </div>
+        </div>
+    </div>
+
     <script>
-        const data = [
+        let data = [
             {
                 name: "mita_jenengku",
                 id: "7430113607846887441",
@@ -3813,10 +3836,24 @@
 
         const tableBody = document.getElementById('table-body');
         const searchInput = document.getElementById('search-input');
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modal-title');
+        const nameInput = document.getElementById('name');
+        const idInput = document.getElementById('id');
+        const targetInput = document.getElementById('target');
+        const diamondsInput = document.getElementById('diamonds');
+        const durationInput = document.getElementById('duration');
+        const validDaysInput = document.getElementById('validDays');
+        const imgInput = document.getElementById('img');
+        const saveButton = document.getElementById('save-button');
+        const cancelButton = document.getElementById('cancel-button');
+        const addButton = document.getElementById('add-button');
+
+        let editIndex = null;
 
         function renderTable(filteredData) {
             tableBody.innerHTML = '';
-            filteredData.forEach(item => {
+            filteredData.forEach((item, index) => {
                 const row = document.createElement('tr');
                 row.classList.add('border-b', 'border-gray-700');
 
@@ -3832,9 +3869,37 @@
                     <td class="py-3 px-4">${item.diamonds}</td>
                     <td class="py-3 px-4">${item.duration}</td>
                     <td class="py-3 px-4">${item.validDays}</td>
+                    <td class="py-3 px-4">
+                        <button class="edit-button bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-2 rounded mr-2" data-index="${index}">Edit</button>
+                        <button class="delete-button bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded" data-index="${index}">Delete</button>
+                    </td>
                 `;
 
                 tableBody.appendChild(row);
+            });
+
+            document.querySelectorAll('.edit-button').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    editIndex = e.target.dataset.index;
+                    const item = data[editIndex];
+                    nameInput.value = item.name;
+                    idInput.value = item.id;
+                    targetInput.value = item.target;
+                    diamondsInput.value = item.diamonds;
+                    durationInput.value = item.duration;
+                    validDaysInput.value = item.validDays;
+                    imgInput.value = item.img;
+                    modalTitle.textContent = 'Edit Record';
+                    modal.classList.remove('hidden');
+                });
+            });
+
+            document.querySelectorAll('.delete-button').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const index = e.target.dataset.index;
+                    data.splice(index, 1);
+                    renderTable(data);
+                });
             });
         }
 
@@ -3842,6 +3907,44 @@
             const searchTerm = e.target.value.toLowerCase();
             const filteredData = data.filter(item => item.name.toLowerCase().includes(searchTerm));
             renderTable(filteredData);
+        });
+
+        addButton.addEventListener('click', () => {
+            editIndex = null;
+            nameInput.value = '';
+            idInput.value = '';
+            targetInput.value = '';
+            diamondsInput.value = '';
+            durationInput.value = '';
+            validDaysInput.value = '';
+            imgInput.value = '';
+            modalTitle.textContent = 'Add New Record';
+            modal.classList.remove('hidden');
+        });
+
+        saveButton.addEventListener('click', () => {
+            const newItem = {
+                name: nameInput.value,
+                id: idInput.value,
+                target: targetInput.value,
+                diamonds: diamondsInput.value,
+                duration: durationInput.value,
+                validDays: validDaysInput.value,
+                img: imgInput.value || "https://placehold.co/40x40"
+            };
+
+            if (editIndex !== null) {
+                data[editIndex] = newItem;
+            } else {
+                data.push(newItem);
+            }
+
+            modal.classList.add('hidden');
+            renderTable(data);
+        });
+
+        cancelButton.addEventListener('click', () => {
+            modal.classList.add('hidden');
         });
 
         // Initial render
